@@ -1,0 +1,25 @@
+{
+  "name": "lilyware",
+  "version": "0.1.0",
+  "description": "Middleware for serving lilypond files",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adius/lilyware.git"
+  },
+  "keywords": [
+    "lilypond",
+    "express",
+    "middleware"
+  ],
+  "author": {
+    "name": "Adrian Sieber",
+    "email": "mail@adriansieber.com",
+    "url": "http://adriansieber.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adius/lilyware/issues"
+  },
+  "homepage": "https://github.com/adius/lilyware"
+}
