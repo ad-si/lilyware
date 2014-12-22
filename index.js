@@ -7,15 +7,25 @@ module.exports = function (basePath) {
 
 	return function (request, response, next) {
 
-		if (request.url.search(/\.ly$/gi) === -1) {
+		if (request.path.search(/\.ly$/gi) === -1) {
 			next()
 			return
 		}
 
+		var format = request.query.format,
+			resolution = request.query.resolution,
+			contentTypes = {
+				png: 'image/png',
+				svg: 'image/svg+xml',
+				pdf: 'application/pdf'
+			}
+
+
 		lilynode.renderFile(
-			path.join(basePath, request.url),
+			path.join(basePath, request.path),
 			{
-				format: 'png'
+				format: format,
+				resolution: resolution
 			},
 			function (error, output) {
 
@@ -24,7 +34,7 @@ module.exports = function (basePath) {
 
 				else
 					response
-						.set('Content-Type', 'image/png')
+						.set('Content-Type', contentTypes[format])
 						.send(output)
 			}
 		)
