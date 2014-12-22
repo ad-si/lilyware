@@ -1,6 +1,5 @@
 var path = require('path'),
-
-	lilynode = require('../lilynode')
+	lilynode = require('lilynode')
 
 
 module.exports = function (basePath) {
