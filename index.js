@@ -11,12 +11,14 @@ module.exports = function (basePath) {
 			return
 		}
 
-		var format = request.query.format,
+		var format = request.query.format || 'png',
 			resolution = request.query.resolution,
 			contentTypes = {
+				midi: 'audio/midi',
+				pdf: 'application/pdf',
 				png: 'image/png',
-				svg: 'image/svg+xml',
-				pdf: 'application/pdf'
+				ps: 'application/postscript',
+				svg: 'image/svg+xml'
 			}
 
 

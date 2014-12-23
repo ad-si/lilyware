@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/adius/lilyware",
   "dependencies": {
-    "lilynode": "^0.2.0"
+    "lilynode": "^0.3.1"
   }
 }
