@@ -19,7 +19,7 @@ Possible options to configure rendering via url query parameters.
 
 #### format
 
-Possible values: png, svg, pdf, ps, midi
+Possible values: png, svg, pdf, ps, midi  
 Default: png
 
 
