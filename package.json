@@ -1,22 +1,27 @@
 {
   "name": "lilyware",
-  "version": "0.3.0",
   "description": "Middleware for serving lilypond files",
+  "version": "0.3.0",
   "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint",
+    "prepublish": "npm test"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": "./node_modules/javascript-styleguide/.eslintrc.yaml"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adius/lilyware.git"
+    "url": "git+https://github.com/adius/lilyware.git"
   },
   "keywords": [
     "lilypond",
     "express",
     "middleware"
   ],
-  "author": {
-    "name": "Adrian Sieber",
-    "email": "mail@adriansieber.com",
-    "url": "http://adriansieber.com"
-  },
+  "author": "Adrian Sieber <mail@adriansieber.com> (http://adriansieber.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/adius/lilyware/issues"
@@ -24,5 +29,9 @@
   "homepage": "https://github.com/adius/lilyware",
   "dependencies": {
     "lilynode": "^0.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^2.8.0",
+    "javascript-styleguide": "^0.2.2"
   }
 }
