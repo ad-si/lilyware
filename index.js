@@ -5,7 +5,7 @@ const lilynode = require('lilynode')
 module.exports = (basePath) => {
   return (request, response, next) => {
 
-    if (request.path.search(/\.ly$/gi) === -1) {
+    if (/\.ly$/gi.test(request.path)) {
       next()
       return
     }
