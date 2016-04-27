@@ -23,8 +23,8 @@ module.exports = (basePath) => {
     lilynode.renderFile(
       path.join(basePath, request.path),
       {
-        format: format,
-        resolution: resolution,
+        format,
+        resolution,
       },
       (error, output) => {
 
